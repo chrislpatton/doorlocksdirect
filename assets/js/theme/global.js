@@ -16,6 +16,7 @@ import 'lazysizes';
 import loadingProgressBar from './global/loading-progress-bar';
 import sweetAlert from './global/sweet-alert';
 import svgInjector from './global/svg-injector';
+import './global/ey-script';
 
 export default class Global extends PageManager {
     onReady() {

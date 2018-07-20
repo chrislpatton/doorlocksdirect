@@ -5,10 +5,51 @@
     </div>
 </div>
 {{/if}}
-<header class="header" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
+<header class=" header header-mobile">
+    <div class="mobile-free-ship">
+        <p><span>Free Shipping </span> on Larger Orders</p>
+    </div>
+    {{#if page_type '===' 'default'}}
+        <h1 class="header-logo header-logo--left">
+            {{> components/common/store-logo}}
+        </h1>
+    {{else}}
+        <div class="header-logo header-logo--left">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+    <div class="cart-menu">
+        <li class="navUser-item navUser-item--cart">
+            <a
+                class="navUser-action"
+                data-cart-preview
+                data-dropdown="cart-preview-dropdown"
+                data-options="align:right"
+                href="{{urls.cart}}"><span class="header-cart"><i class="icon ion-md-cart"></i><span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span></span>
+            </a>
+
+
+            
+        </li>
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+        </a>
+        <div class="clear"></div>
+        <div class="navPages-container" id="menu" data-menu>
+            {{> components/common/navigation-menu-custom}}
+        </div>
+    </div>
+
+</header>
+<div class="clear"></div>
+<header class="header header-desktop" role="banner">
+    
+<div class="wrapper">
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+            <p>menu</p>
+        </a>
+
     {{> components/common/navigation}}
 
     {{#if page_type '===' 'default'}}
@@ -20,8 +61,22 @@
             {{> components/common/store-logo}}
         </div>
     {{/if}}
-    {{{region name="header_bottom"}}}
-    <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
+    <div class="shipping-banner">
+        <span class="free-ship">Free Shipping</span> on Larger Orders | <span class="call-visibility"><span>Give us a Call:</span>
+        <a href="tel"866.755.5625>866.755.5625</a></span>
     </div>
+    <div class="header-left">
+        
+        <div class="header-search expand">
+            {{> components/common/quick-search}}
+        </div>
+    </div>
+    {{{region name="header_bottom"}}}
+    <div class="clear"></div>
+</div>
+    <div class="navPages-container" id="menu" data-menu>
+        {{> components/common/navigation-menu-custom}}
+    </div>
+
 </header>
+

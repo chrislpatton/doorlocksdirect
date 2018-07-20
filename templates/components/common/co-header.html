@@ -1,0 +1,23 @@
+<header class="cart-header-header">
+  <div class="cart-header-container">
+    <div class="mobile-free-ship">
+        <p><span>Free Shipping </span> on Larger Orders <b>Contact Us: </b><a href="tel:866.755.5625">866.755.5625</a></p>
+    </div>
+    {{#if page_type '===' 'default'}}
+        <h1 class="header-logo header-logo--left">
+            {{> components/common/store-logo}}
+        </h1>
+    {{else}}
+        <div class="header-logo header-logo--left">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+    
+    <div class="shipping-banner">
+        <span class="free-ship">Free Shipping</span> on Larger Orders <span ><b>Give us a Call:</b>
+        <a href="tel:866.755.5625">866.755.5625</a></span>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+</header>

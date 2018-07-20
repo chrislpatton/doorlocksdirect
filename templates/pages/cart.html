@@ -12,37 +12,56 @@
 
         {{#if cart.items.length}}
             <div class="loadingOverlay"></div>
-
+            
             <div data-cart-content>
                 {{> components/cart/content}}
             </div>
 
             <div data-cart-totals>
+                <div class="cartCodes">
+                    {{> components/cart/coupon-input-selection}}
+                </div>
                 {{> components/cart/totals}}
             </div>
 
             {{#if cart.show_primary_checkout_button}}
                 <div class="cart-actions">
-                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}</a>
+                    
+                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}"><img src="{{cdn 'assets/img/cart-co/ic_shopping_cart_24px.png'}} " alt="">PROCEED TO CHECKOUT</a>
                     {{#if cart.show_multiple_address_shipping}}
                         <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
                             {{lang 'cart.preview.checkout_multiple'}}
                         </a>
                     {{/if}}
                 </div>
-            {{else}}
-                <div class="cart-actions">
-                    <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
-                </div>
+           
             {{/if}}
 
             {{#if cart.additional_checkout_buttons}}
-                <div class="cart-additionalCheckoutButtons">
+            <div class="secure-shopping-badge">
+                <img  src="{{cdn 'assets/img/cart/secure-shopping.png'}}" alt="secure-shopping">
+            </div>
+                <div class="cart-additionalCheckoutButtons" style="display:none;">
+                -- or use --
                     {{#each cart.additional_checkout_buttons}}
                         {{{this}}}
                     {{/each}}
                 </div>
             {{/if}}
+
+            
+        <!--<div class="cart-coupon">
+        <div class="h4">{{lang 'cart.coupon_code'}}:</div>
+        <p>Enter your coupon code below</p>
+         {{> components/cart/coupon-input}}
+        </div>-->
+        {{#if settings.gift_certificates_enabled}}
+            <!--<div class="cart-certificate">
+            <div class="h4">{{lang 'cart.gift_certificates.gift_certificate'}}</div>
+            <p>Enter your gift card code below</p>
+                {{> components/cart/gift-certificate-input}}
+            </div>-->
+        {{/if}}
         {{else}}
             <h3>{{lang 'cart.checkout.empty_cart'}}</h3>
         {{/if}}
@@ -51,4 +70,4 @@
     </main>
 </div>
 {{/partial}}
-{{> layout/base}}
+{{> layout/co-base}}

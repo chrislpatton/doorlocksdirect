@@ -1,0 +1,115 @@
+// category
+.cats-page{
+  .container{
+    @include breakpoint('large'){
+      max-width:1149px;
+      padding:0;
+    }
+  }
+  .breadcrumbs{
+    @include breakpoint ('small'){
+      text-align:left;
+    }
+    .breadcrumb{
+      a{
+        color:#9B9B9B;
+      }
+    }
+  }
+  .page-heading{
+    text-align:left;
+    font-family: 'Roboto Slab', serif;
+    font-size:27px;
+    font-weight:900;
+    color:#9B9B9B;
+  }
+  .facet-bar{
+    border:1px solid #767676;
+    border-radius:4px;
+
+    .page-sidebar{
+      @include breakpoint('medium')  {
+        width:70%;
+        float:left;
+      }
+      .accordion--navList{
+        .accordion-block{
+          @include breakpoint('medium'){
+            float:left;
+            width:33%;
+            margin-top:0;
+          }
+
+          .accordion-navigation-actions{
+            display:none;
+          }
+        }
+      }
+      .accordion--navList .accordion-content{
+        @include breakpoint('small'){
+          position:absolute;
+          z-index:999;
+          border:1px solid #767676;
+          top:80px;
+          padding:25px 15px;
+        }
+      }
+    }
+    .action-bar{
+      @include breakpoint('medium'){
+        width:28%;
+        float:right;
+      }
+    }
+  }
+
+
+  .page-sidebar + .page-content{
+      @include breakpoint('medium'){
+        width:100%;
+        float:none;
+      }
+      .productGrid{
+        .product{
+          @include breakpoint ('small'){
+            width:25%;
+          }
+        }
+      }
+  }
+}
+//subcategory
+.subcats-page{
+  .container{
+    @include breakpoint('large'){
+      max-width:1149px;
+      padding:0;
+    }
+  }
+  .page-sidebar{
+    @include breakpoint('medium')  {
+      display:none;
+      float:none;
+    }
+  }
+  .page-sidebar + .page-content{
+      @include breakpoint('medium'){
+        width:100%;
+        float:none;
+      }
+      .productGrid{
+        .product{
+          @include breakpoint ('small'){
+            width:25%;
+          }
+          .card-img-container{
+            width:276px;
+            height:276px;
+          }
+          .card-body{
+            text-align:center;
+          }
+        }
+      }
+  }
+}

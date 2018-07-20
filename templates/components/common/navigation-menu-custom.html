@@ -1,0 +1,226 @@
+<nav class="navPages">
+  <div class="navPage-heading">
+    <div class="back navPages-back">
+      BACK
+    </div>
+    <div class="close navPages-close" data-mobile-menu-toggle-close="menu">
+      <i class="icon ion-android-close"></i>
+    </div>
+  </div>
+  <div class="header-search expand mobile" style="display:none">
+      {{> components/common/quick-search}}
+  </div>
+  <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+    <li class="navPages-item">
+      <a href="/" class="navPages-action has-subMenu mob" data-collapsible="navPages-1" aria-controls="navPages-1" aria-expanded="false">SHOP BY PRODUCT<!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <a href="/" class="navPages-action has-subMenu desk">SHOP BY PRODUCT<!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <div class="navPage-subMenu" id="navPages-1" aria-hidden="true" tabindex="-1">
+        <div class="navPages-inner">
+        <div class="mmLinks">
+            <h2 class="mm-title">SHOP BY PRODUCT</h2>
+            <div class="mmLinkCol">
+                <ul class="navPage-subMenu-list">
+                    <!--<li>
+                        <a href="{{theme_settings.mm1_link_1}}">
+                            <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm1_img_1}}" alt="">
+                            <span>{{theme_settings.mm1_name_1}}</span>
+                        </a>
+                    </li>-->
+                   <li>
+                      <a href="/keyless-locks/">Keyless Locks</a>
+                    </li>
+                    <li>
+                      <a href="/handlesets/">Handlesets</a>
+                    </li>
+                    <li>
+                      <a href="/combo-packs-keyed/">Combo Packs - Keyed</a>
+                    </li>
+                    <li>                
+                      <a href="/door-knobs/">Door Knobs</a>
+                    </li>
+                    <li>
+                      <a href="/cabinet-hardware/">Cabinet Hardware</a>
+                    </li>
+                    <li>
+                      <a href="/key-storage/">Key Storage</a>
+                    </li>
+                    <li>
+                      <a href="/door-accessories/">Door Accessories</a>
+                    </li>
+                    <li>
+                      <a href="/lock-parts-access/">Locked Parts &amp; Acces.</a>
+                    </li>
+                    <li>
+                      <a href="/interconnect-locksets/">Interconnect Locksets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mmAd">
+            <a href="{{theme_settings.mm1_ad_link}}">
+                <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm1_ad_img}}" alt="">
+            </a>
+        </div>
+    </div>
+      </div>
+    </li>
+    <li class="navPages-item">
+      <a href="/shop-by-finish/" class="navPages-action has-subMenu mob" data-collapsible="navPages-2" aria-controls="navPages-2" aria-expanded="false">SHOP BY FINISH <!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <a href="/shop-by-finish/" class="navPages-action has-subMenu desk">SHOP BY FINISH <!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <div class="navPage-subMenu" id="navPages-2" aria-hidden="true" tabindex="-1">
+        <div class="navPages-inner">
+        <div class="mmLinks">
+            <h2 class="mm-title">SHOP BY FINISH</h2>
+            <div class="mmLinkCol">
+                <ul class="navPage-subMenu-list">
+                    <!--<li>
+                        <a href="{{theme_settings.mm2_link_1}}">
+                            <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm2_img_1}}" alt="">
+                            <span>{{theme_settings.mm2_name_1}}</span>
+                        </a>
+                    </li>-->
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/antique-nickel/">Antique Nickel</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/antique-brass/">Antique Brass</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/bronze/">Bronze</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/iron-black/">Iron Black</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/polished-brass/">Polished Brass</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/polished-chrome/">Polished Chrome</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/rustic-bronze/">Rustic Bronze</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/rustic-pewter/">Rustic Pewter</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/satin-chrome/">Satin Chrome</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/all-finishes/satin-nickel/">Satin Nickel</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-finish/">All Finshes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mmAd">
+            <a href="{{theme_settings.mm2_ad_link}}">
+                <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm2_ad_img}}" alt="">
+            </a>
+        </div>
+    </div3
+      </div>
+
+    </li>
+    <li class="navPages-item">
+      <a href="/shop-by-brand/" class="navPages-action has-subMenu mob" data-collapsible="navPages-3" aria-controls="navPages-3" aria-expanded="false">SHOP BY BRAND <!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <a href="/shop-by-brand/" class="navPages-action has-subMenu desk">SHOP BY BRAND <!--<i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i>--></a>
+      <div class="navPage-subMenu" id="navPages-3" aria-hidden="true" tabindex="-1">
+        <div class="navPages-inner">
+        <div class="mmLinks">
+            <h2 class="mm-title">SHOP BY BRAND</h2>
+            <div class="mmLinkCol">
+                <ul class="navPage-subMenu-list">
+                    <!--<li>
+                        <a href="{{theme_settings.mm3_link_1}}">
+                            <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm3_img_1}}" alt="">
+                            <span>{{theme_settings.mm3_name_1}}</span>
+                        </a>
+                    </li>-->
+                    <li>
+                      <a href="/shop-by-brand/don-jo/">Don-Jo</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/ge-security/">GE Security</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/hager-hardware/">Hager Hardware</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/hardware-resources/">Hardware Resources</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/kwikset/">Kwikset</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/master-lock/">Master Lock</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/price-pfister/">Price Pfister</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/schlage/">Schlage</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand/weiser/">Weiser</a>
+                    </li>
+                    <li>
+                      <a href="/shop-by-brand">All Brands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="mmAd">
+            <a href="{{theme_settings.mm3_ad_link}}">
+                <img src="https://cdn7.bigcommerce.com/s-gbcjj5wb95/product_images/uploaded_images/{{theme_settings.mm3_ad_img}}" alt="">
+            </a>
+        </div>
+    </div>
+      </div>
+
+    </li>
+
+
+    <!--
+{{#each categories}}
+<li class="navPages-item">
+{{#if ../theme_settings.navigation_design '===' 'simple'}}
+{{> components/common/navigation-list}}
+{{/if}}
+{{#if ../theme_settings.navigation_design '===' 'alternate'}}
+{{> components/common/navigation-list-alternate}}
+{{/if}}
+</li>
+{{/each}}
+-->
+  </ul>
+  <ul class="navPages-list navPages-list--user">
+    <li> 
+      <a class="navUser-action" href="{{urls.auth.login}}"><i class="icon ion-md-mail"></i>Email Us</a></li>
+    <li> 
+    <a class="navUser-action" href="{{urls.auth.login}}"><i class="icon ion-md-call"></i>Give Us a Call</a></li>
+    <li class="navUser-item navUser-item--account">
+      {{#if customer}}
+          <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+          <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+      {{else}}
+          <a class="navUser-action" href="{{urls.auth.login}}"><i class="icon ion-md-person"></i>Account</a>
+          {{#if settings.account_creation_enabled}}
+              
+          {{/if}}
+      {{/if}}
+      </li>
+    <!--{{#if theme_settings.social_icon_placement_top}}
+<li class="navPages-item">
+{{> components/common/social-links}}
+</li>
+{{/if}}-->
+<div class="secondary-links">
+  <li><a href="/catalog/">Catalog <i class="icon ion-md-arrow-dropright"></i></a></li>
+  <li><a href="/blog/">Blog <i class="icon ion-md-arrow-dropright"></i></a></li>
+</div>
+  </ul>
+</nav>

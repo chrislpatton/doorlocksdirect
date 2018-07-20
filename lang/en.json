@@ -57,11 +57,11 @@
             "update": "Update shipping cost"
         },
         "preview": {
-            "checkout_now": "Check out now",
+            "checkout_now": "PROCEED TO CHECK OUT",
             "checkout_multiple": "or check out with multiple addresses",
             "view_cart": "View Cart"
         },
-        "label": "Your Cart ({quantity, plural, one {# item} other {# items}})",
+        "label": "Your Cart ({quantity, plural, one {#} other {#}})",
         "is_empty": "Your cart is empty",
         "coupon_code": "Coupon Code",
         "discount": "Discount",
@@ -724,7 +724,7 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Subscribe to our newsletter",
+        "subscribe": "Sign Up for Our Newsletter",
         "subscribe_intro": "Get the latest updates on new products and upcoming sales",
         "subscribe_submit": "Subscribe",
         "email_placeholder": "Your email address",

@@ -1,0 +1,14 @@
+<div class="cart-form coupon-code cart-coupon">
+<div class="h4">HAVE A PROMOTION CODE?</div>
+
+    <form class="form form--hiddenLabels coupon-form" method="post" action="{{urls.cart}}">
+        <label class="form-label" for="couponcode">{{lang 'cart.coupons.coupon_code'}}</label>
+        <input class="form-input" data-error="{{lang 'cart.coupons.empty_error'}}"  id="couponcode" type="text" name="couponcode" value="" placeholder="Enter your promotion code">
+        <input class="button button--primary button--small" type="submit" value="APPLY">
+        <input type="hidden" name="action" value="applycoupon">
+    </form>
+
+    <div class="cart-actions">
+        <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}"> <i class="icon ion-ios-arrow-back"></i> {{lang 'cart.continue_shopping'}}</a>
+    </div>
+</div>

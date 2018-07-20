@@ -1,0 +1,26 @@
+<div class="SubCategoryList" id="SubCategoryList ">
+  <ul class="productGrid"> 
+    {{#each category.subcategories}}
+    <li class="product"> 
+      <article class="card">  
+          <figure class="card-figure">  
+            {{#if image}}
+            <a href="{{url}}" alt="{{name}}" title="{{name}}">
+              <div class="card-img-container">  
+                <img src="{{getImage image 'productgallery_size'}}" alt="" class="card-image">
+              </div>
+            </a>
+            {{/if}}
+          </figure>
+          <div class="card-body"> 
+            <h4 class="card-title"> 
+              <a href="{{url}}" alt="{{name}}" title="{{name}}">
+                {{name}}
+              </a>
+            </h4>
+          </div>   
+      </article>
+    </li>  
+    {{/each}}
+  </ul>
+</div>

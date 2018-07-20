@@ -6,48 +6,58 @@ category:
 ---
 {{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
 {{#partial "head"}}
-    {{#if pagination.category.previous}}
-        <link rel="prev" href="{{pagination.category.previous}}">
-    {{/if}}
-    {{#if pagination.category.next}}
-        <link rel="next" href="{{pagination.category.next}}">
-    {{/if}}
-{{/partial}}
-
-{{#partial "page"}}
-
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-{{#if category.image}}
-    <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage category.image 'zoom_size'}}">
+{{#if pagination.category.previous}}
+<link rel="prev" href="{{pagination.category.previous}}">
 {{/if}}
-<h1 class="page-heading">{{category.name}}</h1>
-{{{category.description}}}
-{{{snippet 'categories'}}}
-<div class="page">
-    {{#if category.faceted_search_enabled}}
-        <aside class="page-sidebar" id="faceted-search-container">
-            {{> components/category/sidebar}}
-        </aside>
-    {{else if category.subcategories}}
-        <aside class="page-sidebar" id="faceted-search-container">
-            {{> components/category/sidebar}}
-        </aside>
-    {{else if category.shop_by_price}}
-        {{#if theme_settings.shop_by_price_visibility}}
-             <aside class="page-sidebar" id="faceted-search-container">
-                {{> components/category/sidebar}}
-            </aside>
-        {{/if}}
-    {{/if}}
-
-    <main class="page-content" id="product-listing-container">
-        {{#if category.products}}
-            {{> components/category/product-listing}}
-        {{else}}
-            <p>{{lang 'categories.no_products'}}</p>
-        {{/if}}
-    </main>
-</div>
-
+{{#if pagination.category.next}}
+<link rel="next" href="{{pagination.category.next}}">
+{{/if}}
 {{/partial}}
-{{> layout/base}}
+{{#partial "page"}}
+<!--<div class="container">-->
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!--{{#if category.image}}
+    <img src="{{getImage category.image 'zoom_size'}}">
+    {{/if}}-->
+    {{#if category.subcategories}}
+    <div class="categorypage page">
+        <div class="container">
+            <h1 class="page-heading section-title subcats">{{category.name}}</h1>
+        </div>
+    </div>        
+    {{else}}
+    <div class="sub-cat-top">
+    
+    <h1 class="page-heading section-title section-title-alt">{{category.name}} </h1>
+    </div>  
+    {{/if}}
+    
+    {{{snippet 'categories'}}}
+<!--</div>-->
+<div class="categorypage page">
+    <div class="container">
+        {{#if category.subcategories}}
+        <aside class="page-sidebar" id="faceted-search-container" style="display:none;">
+            {{> components/category/sidebar}}
+        </aside>
+        {{else}}
+        
+        {{/if}}
+        </main>
+        {{#if category.subcategories}}
+        <main class="page-content cat" id="product-listing-container">
+        {{> components/category/subcategory-listing}}
+        
+        {{else}}
+        <main class="page-content" id="product-listing-container">
+         {{> components/category/product-listing}}
+        {{/if}}
+
+        <div class="category-description">
+            {{{category.description}}}
+        </div>
+        </main>
+    </div>
+</div>
+{{/partial}}
+{{> layout/section-base}}

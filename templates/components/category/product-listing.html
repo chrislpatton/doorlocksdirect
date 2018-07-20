@@ -1,6 +1,21 @@
-{{> components/products/filter sort=pagination.category.sort}}
+<div id="facetBar" class="facet-bar">
+        {{#or category.subcategories category.faceted_search_enabled}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+    {{else}}
+        {{#if theme_settings.shop_by_price_visible}}
+            <aside class="page-sidebar" id="faceted-search-container">
+                {{> components/category/sidebar}}
+            </aside>
+        {{/if}}
+    {{/or}}
+    {{> components/products/filter sort=pagination.category.sort}}
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
 
-<form action="{{urls.compare}}" method='POST' data-product-compare>
+<form class="productGridForm" action="{{urls.compare}}" method='POST' data-product-compare>
     {{#if theme_settings.product_list_display_mode '===' 'grid'}}
         {{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
     {{else}}
