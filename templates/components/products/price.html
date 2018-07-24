@@ -38,7 +38,7 @@
     {{#if price.without_tax}}
         <div class="price-section rrp-price--withoutTax price-section--withoutTax {{#if price.with_tax}}price-section--minor{{/if}}">
             {{#if price.rrp_without_tax}}
-                {{lang 'products.retail_price'}}
+                <!-- lang was product.retail_ price -->
                 <span data-product-rrp-price-without-tax class="price price--rrp"> {{price.rrp_without_tax.formatted}}</span>
             {{/if}}
         </div>
@@ -48,13 +48,14 @@
                 <span data-product-non-sale-price-without-tax class="price price--rrp"> {{price.non_sale_price_without_tax.formatted}}</span>
             {{/if}}
         </div>
-        <div {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
+        <div class="price-now" {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
             <span class="price-now-label">
                 {{#if price.non_sale_price_without_tax}}
-                    {{lang 'products.price_now'}}
+                    {{lang 'products.price_now'}} 
                 {{/if}}
             </span>
-            <span data-product-price-without-tax class="price price--withoutTax"> {{price.without_tax.formatted}}</span>
+            <span data-product-price-without-tax class="price price--withoutTax">
+            Now {{price.without_tax.formatted}}</span>
             {{#if schema_org}}
                 <meta itemprop="availability" itemtype="http://schema.org/ItemAvailability"
                     content="http://schema.org/{{#if product.pre_order}}PreOrder{{else if product.out_of_stock}}OutOfStock{{else if product.can_purchase '===' false}}OutOfStock{{else}}InStock{{/if}}">
@@ -69,6 +70,7 @@
                 <abbr title="{{lang 'products.excluding_tax'}}">{{lang 'products.price_without_tax' tax_label=price.tax_label}}</abbr>
             {{/if}}
         </div>
+        <div class="clear"></div>
     {{/if}}
     {{#if page_type '===' 'product'}}
         {{#if price.saved}}
